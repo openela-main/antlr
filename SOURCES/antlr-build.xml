@@ -36,7 +36,7 @@
   <!-- Build classes -->
   <target name="classes" depends="prepare">
     <javac srcdir="${src}" destdir="${build.classes}"
-      debug="off" optimize="on" deprecation="on"/>
+      debug="off" optimize="on" deprecation="on" source="1.8" target="1.8" />
   </target>
 
   <!-- Build jar archives -->
@@ -61,6 +61,7 @@
       packagenames="${packagenames}"
       splitindex="true"
       use="true"
+      source="1.8"
       additionalparam="-Xdoclint:none">
       <link href="${j2se.apidoc}"/>
     </javadoc>

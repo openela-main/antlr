@@ -4,7 +4,7 @@
 Summary:       ANother Tool for Language Recognition
 Name:          antlr
 Version:       2.7.7
-Release:       70%{?dist}
+Release:       73%{?dist}
 License:       ANTLR-PD
 URL:           http://www.antlr2.org/
 # ./generate-tarball.sh
@@ -128,6 +128,15 @@ install -p -m 755 scripts/antlr-config $RPM_BUILD_ROOT%{_bindir}
 %license LICENSE.txt
 
 %changelog
+* Wed Dec 04 2024 Mikolaj Izdebski <mizdebsk@redhat.com> - 2.7.7-73
+- set javac source / target version to 1.8 to fix issues with Java 11
+
+* Sun Nov 24 2024 Marián Konček <mkoncek@redhat.com> - 2.7.7-72
+- Rebuild
+
+* Fri Nov 22 2024 Marián Konček <mkoncek@redhat.com> - 2.7.7-71
+- Rebuild
+
 * Thu Nov 21 2024 Marián Konček <mkoncek@redhat.com> - 2.7.7-70
 - Fix patch usage
 
